@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
+    <title>React App</title>
+  </head>
+
+    <script>
+      //let a = 34;
+      // const a = 45;
+      let a = 45;
+      a = 4554 + 4;
+      console.log(a);
+
+    // Types of data types in javascript
+      // Numbers
+      // objects 
+      // Booleans - True or false 
+      // String
+      // undefined 
+      // Null
+
+      function hello() {
+         console.log("Hey Harry")
+      }
+
+      let obja = {      // object 
+         r: 34,
+         m: 64,
+         func: function myfunc(number){   // object ka andar function
+          console.log("The number is " + number);
+         }
+      }
+        
+      // some type of event
+
+      document.addEventListener("click", function click(){
+        console.log("clicked");
+        // alert("hello")
+        let conf = confirm("Are you sure?");
+        console.log(conf);
+      })
+
+    //  for (let index = 0; index < array.length; index++) {
+    //   const element = array[index];
+      
+    //  }
+        
+    let arr = [34, 21, 23];
+    cosole.log(this);
+
+    // function myfun(number){
+    // console.log("The number is " + this);
+    // }
+
+    let mobj = {
+      a : this,
+      myfunc : function(number){
+        console.log(this);
+      }
+    }
+    mobj.myfunc();
+    console.log(mobj.a);
+    setTimeout(() => {
+      console.log("yayyy")
+    },3000);
+     console.log("mai neeche wali script hoon")
+    </script>
+    <div id="root"></div>
+    
+    <body>
+      <h1>
+        I am learning js
+      </h1>
+       
+    </body>
+  
+</html>
+
+<!-- StrictMode helps developers detect potential bugs, such as:
+- Unexpected side effects: Helps identify code that causes unintended changes.
+- Missing cleanup: Helps detect missing cleanup in effects, such as subscriptions or event listeners.
+- Deprecated APIs: Helps identify certain outdated React APIs.
+- Unsafe component behavior: Helps reveal problems with components that may behave incorrectly. -->
+
+
+<!-- callback vo function hai execute hota hai jab apka jab setTimeout execute hona ko ajata hai yha per code execute hota rhata hai rukta nhi hai kisi ka liya    -->
