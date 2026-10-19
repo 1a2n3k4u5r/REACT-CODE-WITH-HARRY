@@ -23,7 +23,7 @@ reportWebVitals()
 
 
 
-NOTE = IMPORTANT
+// NOTE = IMPORTANT
 // import React from 'react';	Imports React. This import is optional in many modern setups.
 // import ReactDOM from 'react-dom/client';	Imports the React DOM APIs used to render components in the browser.
 // import './index.css';	Loads the global CSS file.

@@ -3,7 +3,16 @@ import './App.css';
 
 function App() {             //defines a React component.
    return (                  // returns the UI.
-       <div className="blank"></div>
+       <>
+       <nav>
+        <li>Home</li>
+         <li>About</li>
+          <li>Contacts</li>
+       </nav>
+       <div className='cointainer'>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis placeat ex sit corrupti, error asperiores aut labore amet dignissimos hic et, enim ipsa voluptate nulla. Nihil qui fugit eligendi error.</p>
+       </div>
+       </>
   );
 }
 
