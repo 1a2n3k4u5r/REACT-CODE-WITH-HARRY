@@ -42,3 +42,7 @@ reportWebVitals()
 // In React.js, rendering means displaying your React components and their content in the browser.
 
 //</App> //tells React to render the component defined in App.js.
+
+// Bootstrap is a free, open-source front-end framework used to create attractive, responsive websites quickly. It provides ready-made CSS styles and JavaScript components, so you don't have to design everything from scratch.
+
+// In simple words, Bootstrap gives you pre-built designs for buttons, forms, navigation bars, cards, and other website elements.
