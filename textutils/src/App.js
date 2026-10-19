@@ -1,18 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {             //defines a React component.
-   return (                  // returns the UI.
-       <>
-       <nav>
-        <li>Home</li>
-         <li>About</li>
-          <li>Contacts</li>
-       </nav>
-       <div className='cointainer'>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis placeat ex sit corrupti, error asperiores aut labore amet dignissimos hic et, enim ipsa voluptate nulla. Nihil qui fugit eligendi error.</p>
-       </div>
-       </>
+function App() {             
+   return (                 
+      <>
+      <nav className="navbar md:navbar-expand bg-1">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="/">Textutils</a>
+    <button className="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <dialog className="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+      <div className="drawer-header">
+        <h5 className="drawer-title" id="navbarDrawerLabel">Menu</h5>
+        <button type="button" className="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+      </div>
+      <div className="drawer-body mb-2 md:mb-0">
+        <ul className="nav navbar-nav me-auto">
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/">About</a>
+          </li>
+          
+        </ul>
+        <form className="hstack gap-2" role="search">
+          <input className="form-control" type="search" placeholder="Search" aria-label="Search"/>
+          <button className="btn-solid btn-icon theme-secondary" type="submit">
+            <svg className="bi" width="16" height="16"><use href="#search" /></svg>
+          </button>
+        </form>
+      </div>
+   </dialog>
+  </div>
+</nav>
+      </> 
   );
 }
 
