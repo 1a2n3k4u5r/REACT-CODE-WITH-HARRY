@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
   return (
-     <nav className="navbar md:navbar-expand bg-1">
+     <nav className="navbar md:navbar-expand bg-1 navbar-dark bg-dark1">
   <div className="container-fluid">
     <a className="navbar-brand" href="/">{props.title}</a>
     <button className="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,12 +25,12 @@ export default function Navbar(props) {
           </li>
           
         </ul>
-        <form className="hstack gap-2" role="search">
+        {/* <form className="hstack gap-2" role="search">
           <input className="form-control" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn-solid btn-icon theme-secondary" type="submit">
+          <button className="btn-solid btn-icon theme-primary" type="submit">
             <svg className="bi" width="16" height="16"><use href="#search" /></svg>
           </button>
-        </form>
+        </form> */}
       </div>
    </dialog>
   </div>
@@ -46,3 +46,5 @@ Navbar.defaultProps = {
     title : 'Set title here',
     aboutText : 'About text here'
   };
+
+  //Navbar.js = Displays/manages the navigation bar

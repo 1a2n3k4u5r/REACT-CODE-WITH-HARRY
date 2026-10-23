@@ -3,14 +3,19 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
 
-function App() {             
+// import About from './components/About';
+
+ 
+function App() {         
+   const[darkMode,setDarkMode] = useState(false);// whether dark mode is  enable or not
    return (                 
       <>
       {/* <Navbar title = "Textutils" aboutText = "About us"/> */}
       {/* <Navbar/> */}
-      <Navbar title = "TextUtils"/>
+      <Navbar title = "TextUtils" mode = {darkMode}/>
       <div className="container my-3">
       <Textform heading="Enter the text to analyze below"/>
+      {/* <About/> */}
       </div>
     
       </> 
@@ -50,3 +55,7 @@ export default App;  //allows other files to import the component.
 // In React, you generally need to return a single JSX element at the top level. A Fragment lets you group several elements into one return structure without adding an unnecessary parent element.
 
 // my-3 is the margin in the Y-axis at the 3rem.
+
+
+// App.js = Main component; brings other components together.
+// Organizes the application components
