@@ -5,7 +5,7 @@ export default function About() {
    const [myStyle,setMyStyle] = useState(
      {
         color:'black',
-        backgroundcolor:'white',
+        backgroundColor:'white',
       
    })
 

@@ -1,28 +1,122 @@
-import logo from './logo.svg';
+
+
 import './App.css';
+import React, { useState } from 'react';
+
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
+import About from './components/About';
+import Alert from './components/Alert';
 
-// import About from './components/About';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
 
- 
-function App() {         
-   const[darkMode,setDarkMode] = useState(false);// whether dark mode is  enable or not
-   return (                 
-      <>
-      {/* <Navbar title = "Textutils" aboutText = "About us"/> */}
-      {/* <Navbar/> */}
-      <Navbar title = "TextUtils" mode = {darkMode}/>
-      <div className="container my-3">
-      <Textform heading="Enter the text to analyze below"/>
-      {/* <About/> */}
-      </div>
-    
-      </> 
+
+function App() {
+
+  // State for Dark Mode
+  const [mode, setMode] = useState('light');
+
+  // State for Alert
+  const [alert, setAlert] = useState(null);
+
+  // Show Alert Function
+  const showAlert = (message, type) => {
+
+    setAlert({
+      msg: message,
+      type: type
+    });
+
+    setTimeout(() => {
+      setAlert(null);
+    }, 1500);
+  };
+
+
+  // Toggle Dark Mode Function
+  const toggleMode = () => {
+
+    if (mode === 'light') {
+
+      setMode('dark');
+
+      document.body.style.background = '#042743';
+
+      showAlert('Dark mode has been enabled', 'success');
+
+      document.title = 'TextUtils - Dark Mode';
+
+    } else {
+
+      setMode('light');
+
+      document.body.style.background = 'white';
+
+      showAlert('Light mode has been enabled', 'success');
+
+      document.title = 'TextUtils - Light Mode';
+    }
+  };
+
+
+  // Return JSX
+  return (
+
+    <>
+
+      <Router>
+
+        {/* Navbar Component */}
+        <Navbar
+          title="TextUtils"
+          mode={mode}
+          toggleMode={toggleMode}
+        />
+
+        {/* Alert Component */}
+        <Alert alert={alert} />
+
+        <div className="container my-3">
+
+          {/* React Router */}
+          <Routes>
+
+            {/* About Page */}
+            <Route
+              path="/about"
+              element={<About />}
+            />
+
+            {/* Home Page */}
+            <Route
+              path="/"
+              element={
+                <Textform
+                  showAlert={showAlert}
+                  heading="Enter the text to analyze below"
+                  mode={mode}
+                />
+              }
+            />
+
+          </Routes>
+
+        </div>
+
+      </Router>
+
+    </>
+
   );
+
 }
 
-export default App;  //allows other files to import the component.
+export default App;
+  //allows other files to import the component.
 
 
 // In React.js, App.js is the main component file where you usually write the user interface (UI) of your application. It brings together different components and decides what content should be displayed.
