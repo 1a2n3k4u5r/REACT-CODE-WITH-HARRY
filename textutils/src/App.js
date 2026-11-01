@@ -5,14 +5,14 @@ import React, { useState } from 'react';
 
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
-import About from './components/About';
+// import About from './components/About';
 import Alert from './components/Alert';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from 'react-router-dom';
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from 'react-router-dom';
 
 
 function App() {
@@ -68,7 +68,7 @@ function App() {
 
     <>
 
-      <Router>
+      {/* <Router> */}
 
         {/* Navbar Component */}
         <Navbar
@@ -83,31 +83,29 @@ function App() {
         <div className="container my-3">
 
           {/* React Router */}
-          <Routes>
+          {/* <Routes> */}
 
             {/* About Page */}
-            <Route
+            {/* <Route
               path="/about"
               element={<About />}
-            />
+            /> */}
 
             {/* Home Page */}
-            <Route
-              path="/"
-              element={
+            {/* <Route
+              path="/"*/}
                 <Textform
                   showAlert={showAlert}
                   heading="Enter the text to analyze below"
-                  mode={mode}
-                />
-              }
-            />
+                  mode={mode} />
+             {/* }
+         /> */}
 
-          </Routes>
+          {/* </Routes> */}
 
         </div>
 
-      </Router>
+      {/* // </Router> */}
 
     </>
 
