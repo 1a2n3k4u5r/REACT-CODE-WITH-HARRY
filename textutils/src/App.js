@@ -1,19 +1,17 @@
 
-
 import './App.css';
 import React, { useState } from 'react';
 
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
-// import About from './components/About';
+import About from './components/About';
 import Alert from './components/Alert';
 
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route
-// } from 'react-router-dom';
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
 
 function App() {
 
@@ -25,7 +23,6 @@ function App() {
 
   // Show Alert Function
   const showAlert = (message, type) => {
-
     setAlert({
       msg: message,
       type: type
@@ -36,39 +33,29 @@ function App() {
     }, 1500);
   };
 
-
   // Toggle Dark Mode Function
   const toggleMode = () => {
 
     if (mode === 'light') {
-
       setMode('dark');
 
       document.body.style.background = '#042743';
 
       showAlert('Dark mode has been enabled', 'success');
 
-      document.title = 'TextUtils - Dark Mode';
-
     } else {
-
       setMode('light');
 
       document.body.style.background = 'white';
 
       showAlert('Light mode has been enabled', 'success');
-
-      document.title = 'TextUtils - Light Mode';
     }
   };
 
-
   // Return JSX
   return (
-
     <>
-
-      {/* <Router> */}
+      <Router>
 
         {/* Navbar Component */}
         <Navbar
@@ -83,37 +70,37 @@ function App() {
         <div className="container my-3">
 
           {/* React Router */}
-          {/* <Routes> */}
+          <Routes>
 
             {/* About Page */}
-            {/* <Route
+            <Route
               path="/about"
-              element={<About />}
-            /> */}
+              element={<About mode={mode} />}
+            />
 
             {/* Home Page */}
-            {/* <Route
-              path="/"*/}
+            <Route
+              path="/"
+              element={
                 <Textform
                   showAlert={showAlert}
-                  heading="Enter the text to analyze below"
-                  mode={mode} />
-             {/* }
-         /> */}
+                  heading="Try TextUtils - word counter, char counter, remove extra spaces"
+                  mode={mode}
+                />
+              }
+            />
 
-          {/* </Routes> */}
+          </Routes>
 
         </div>
 
-      {/* // </Router> */}
-
+      </Router>
     </>
-
   );
-
 }
 
 export default App;
+
   //allows other files to import the component.
 
 

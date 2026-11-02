@@ -11,6 +11,7 @@ export default function Alert(props) {
     return null;
     }
   return (
+    <div style = {{height: "50px"}} >
       <div
         className={`alert alert-${props.alert.type} alert-dismissible fade show`}
         role="alert">
@@ -22,6 +23,7 @@ export default function Alert(props) {
           data-bs-dismiss="alert"
           aria-label="Close"
         ></button>
+      </div>
       </div>
     )
 
